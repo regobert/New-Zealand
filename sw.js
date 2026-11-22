@@ -1,9 +1,10 @@
 // Service worker: maakt de app offline bruikbaar.
 // Verhoog CACHE_VERSION bij elke nieuwe versie van de app, dan halen telefoons de update op.
-const CACHE_VERSION = 'nz-reis-v1';
+const CACHE_VERSION = 'nz-reis-v2';
 const APP_SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon.svg', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 // Externe bibliotheken en lettertypen die na het eerste bezoek offline beschikbaar blijven.
-const RUNTIME_HOSTS = ['unpkg.com', 'fonts.googleapis.com', 'fonts.gstatic.com', 'www.gstatic.com'];
+// upload.wikimedia.org: de dagfoto's, zodat ze na één keer bekijken ook offline te zien zijn.
+const RUNTIME_HOSTS = ['unpkg.com', 'fonts.googleapis.com', 'fonts.gstatic.com', 'www.gstatic.com', 'upload.wikimedia.org'];
 const PRECACHE_EXTERNAL = [
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
