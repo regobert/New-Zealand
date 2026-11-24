@@ -1120,25 +1120,12 @@
         base: 'Basis 5: Te Anau',
         accommodation: 'DOC Henry Creek / Te Anau Holiday Park',
         status: 'Nog boeken',
-        weatherAlt: 'Bij regen is Milford Sound juist indrukwekkend door de vele tijdelijke watervallen. Is de Milford Road dicht (lawine- of steenslaggevaar), dan ruilen met dag 19 of 20.',
+        weatherAlt: 'Bij regen is Milford Sound juist indrukwekkend door de vele tijdelijke watervallen. Is de Milford Road dicht (lawine- of steenslaggevaar), dan ruilen met dag 18 of 20.',
         notes: 'Cruise vooraf boeken (o.a. RealNZ, Southern Discoveries, Cruise Milford); kies een vertrek rond het middaguur. Tank vol in Te Anau: onderweg zijn geen tankstations. Check de dag zelf de wegstatus van de Milford Road (NZTA). Regenjas en warme trui mee voor op het dek.',
         lat: -44.6706, lng: 167.9249, mapsQuery: 'Milford Sound Visitor Terminal, New Zealand'
       },
       {
-        day: 18, date: 'Vr 8 jan', isBaseStart: false, baseTag: 'Basis 5', isTopHike: true,
-        route: 'Toptocht 4: Gertrude Saddle (Milford Road)',
-        driveTime: '2,5 uur retour',
-        hike: 'Spectaculaire alpiene klim door een gletsjerketeldal over steile granietplaten (met staalkabels) naar Gertrude Saddle (1.400 m) met uitzicht richting Milford Sound.',
-        hikeStats: '5–7 uur (+650 m klauteren)',
-        base: 'Basis 5: Te Anau / Milford Road',
-        accommodation: 'DOC Henry Creek / Te Anau Holiday Park',
-        status: 'Nog boeken',
-        weatherAlt: 'Lake Marian Track (3 uur, +400 m) of Mirror Lakes & The Chasm.',
-        notes: 'WAARSCHUWING: Alleen lopen bij droge rotsen! Bij regen worden de granietplaten levensgevaarlijk glad.',
-        lat: -44.7492, lng: 168.0078, mapsQuery: 'Gertrude Valley Carpark, Milford Road'
-      },
-      {
-        day: 19, date: 'Za 9 jan', isBaseStart: false, baseTag: 'Basis 5', isTopHike: false,
+        day: 18, date: 'Vr 8 jan', isBaseStart: false, baseTag: 'Basis 5', isTopHike: false,
         route: 'Kepler Track Dagwandeling (Rainbow Reach → Moturau Hut)',
         driveTime: '0,5 uur',
         hike: 'Ontspannen wandeling door mosbegroeide zuidelijke beukenbossen langs de Waiau River en het zandstrand van Shallow Bay bij Lake Manapouri.',
@@ -1149,6 +1136,19 @@
         weatherAlt: 'Deze route ligt beschut onder het bladerdak van het regenwoud — ideaal bij wisselvallig weer.',
         notes: 'Startpunt op 10 minuten rijden ten zuiden van Te Anau.',
         lat: -45.4851, lng: 167.6742, mapsQuery: 'Rainbow Reach Carpark, Te Anau'
+      },
+      {
+        day: 19, date: 'Za 9 jan', isBaseStart: false, baseTag: 'Basis 5', isTopHike: true,
+        route: 'Toptocht 4: Gertrude Saddle (Milford Road)',
+        driveTime: '2,5 uur retour',
+        hike: 'Spectaculaire alpiene klim door een gletsjerketeldal over steile granietplaten (met staalkabels) naar Gertrude Saddle (1.400 m) met uitzicht richting Milford Sound.',
+        hikeStats: '5–7 uur (+650 m klauteren)',
+        base: 'Basis 5: Te Anau / Milford Road',
+        accommodation: 'DOC Henry Creek / Te Anau Holiday Park',
+        status: 'Nog boeken',
+        weatherAlt: 'Lake Marian Track (3 uur, +400 m) of Mirror Lakes & The Chasm.',
+        notes: 'WAARSCHUWING: Alleen lopen bij droge rotsen! Bij regen worden de granietplaten levensgevaarlijk glad.',
+        lat: -44.7492, lng: 168.0078, mapsQuery: 'Gertrude Valley Carpark, Milford Road'
       },
       {
         day: 20, date: 'Zo 10 jan', isBaseStart: false, baseTag: 'Basis 5', isTopHike: false,
@@ -1499,7 +1499,7 @@
         fallback: 'Blue Pools Track langs de Haast Highway.'
       },
       {
-        name: '4. Gertrude Saddle (Milford Road — Dag 18)',
+        name: '4. Gertrude Saddle (Milford Road — Dag 19)',
         stats: '5–7 uur • +650 m klauteren • Top 1.400 m',
         risk: 'Steile granietplaten met staalkabels. Bij regen of natte rotsen levensgevaarlijk glad — dan direct uitwijken!',
         fallback: 'Lake Marian Track (3 uur, +400 m) of Mirror Lakes & The Chasm.'
@@ -1519,7 +1519,7 @@
     // automatisch per onderdeel doorgevoerd (zie syncDefaults). Dit getal hoeft niet meer omhoog.
     const DATA_VERSION = 2;
     // Wordt bij elke nieuwe versie automatisch ingevuld (datum en tijd van het bouwen).
-    const APP_VERSION = '2026-11-24 07:49';
+    const APP_VERSION = '2026-11-24 09:01';
     // Optioneel: eigen Gemini API-sleutel voor het uitlezen van mails en PDF's. Leeg = alleen de ingebouwde lezer.
     const GEMINI_API_KEY = '';
     // Optioneel: plak hier je eigen Firebase-config ({ apiKey: '...', projectId: '...', ... }) om live groepssync aan te zetten.
@@ -2674,8 +2674,8 @@
       15: ['Rob Roy Glacier', 'Matukituki River'],
       16: ['Crown Range Road', 'Arrowtown'],
       17: ['Milford Sound', 'Mitre Peak', 'Milford Road Mirror Lakes'],
-      18: ['Gertrude Saddle Fiordland', 'Milford Road Homer Tunnel'],
-      19: ['Kepler Track', 'Lake Manapouri'],
+      18: ['Kepler Track', 'Lake Manapouri'],
+      19: ['Gertrude Saddle Fiordland', 'Milford Road Homer Tunnel'],
       20: ['Key Summit Routeburn Track', 'Lake Te Anau'],
       21: ['Lindis Pass', 'Lake Pukaki'],
       22: ['Mueller Hut', 'Aoraki / Mount Cook'],
@@ -3621,7 +3621,7 @@ ${text}`;
       { id: 'mleg-5', label: "Dag 8–11: Punakaiki → Arthur's Pass & Lake Brunner (Basis 3)", points: [[-42.1144, 171.3364], [-42.9431, 171.5614], [-42.6156, 171.4486]], excursion: false, query: "Arthur's Pass Village" },
       { id: 'mleg-6', label: 'Dag 12–15: Lake Brunner → West Coast → Haast Pass → Wanaka (Basis 4)', points: [[-42.6156, 171.4486], [-42.9567, 171.0150], [-43.3894, 170.1833], [-44.1064, 169.3547], [-44.7032, 169.1321]], excursion: false, query: 'Wanaka, New Zealand' },
       { id: 'mleg-7', label: 'Dag 16–20: Wanaka → Queenstown → Te Anau (Basis 5)', points: [[-44.7032, 169.1321], [-45.4145, 167.7181]], excursion: false, query: 'Te Anau, Fiordland' },
-      { id: 'mleg-8', label: 'Dag 17–18: Te Anau → Milford Road → Milford Sound (Excursie)', points: [[-45.4145, 167.7181], [-44.9786, 168.0135], [-44.6706, 167.9249]], excursion: true, query: 'Milford Sound Visitor Terminal' },
+      { id: 'mleg-8', label: 'Dag 17 en 19: Te Anau → Milford Road → Milford Sound (Excursie)', points: [[-45.4145, 167.7181], [-44.9786, 168.0135], [-44.6706, 167.9249]], excursion: true, query: 'Milford Sound Visitor Terminal' },
       { id: 'mleg-9', label: 'Dag 21–24: Te Anau → Lindis Pass → Aoraki / Mt. Cook (Basis 6)', points: [[-45.4145, 167.7181], [-44.5878, 169.6419], [-43.7192, 170.0942]], excursion: false, query: 'White Horse Hill Campground, Mount Cook' },
       { id: 'mleg-10', label: 'Dag 25–27: Mt. Cook → Tekapo → Geraldine → Christchurch', points: [[-43.7192, 170.0942], [-44.0047, 170.4771], [-43.8936, 171.2414], [-43.5321, 172.6362]], excursion: false, query: 'Christchurch Airport' }
     ];
@@ -3636,7 +3636,7 @@ ${text}`;
       { badge: 'B3', title: 'Basis 3: Lake Brunner (Dag 10–11 O&N)', lat: -42.6156, lng: 171.4486, color: '#0f3d5e' },
       { badge: 'B4', title: 'Basis 4: Wanaka (Dag 12–15)', lat: -44.7032, lng: 169.1321, color: '#0f3d5e' },
       { badge: 'B5', title: 'Basis 5: Te Anau (Dag 16–20)', lat: -45.4145, lng: 167.7181, color: '#0f3d5e' },
-      { badge: 'D17', title: 'Milford Sound (Dag 17) & Gertrude Saddle (Dag 18)', lat: -44.6706, lng: 167.9249, color: '#d97706' },
+      { badge: 'D17', title: 'Milford Sound (Dag 17) & Gertrude Saddle (Dag 19)', lat: -44.6706, lng: 167.9249, color: '#d97706' },
       { badge: 'B6', title: 'Basis 6: Aoraki / Mt. Cook (Dag 21–24)', lat: -43.7192, lng: 170.0942, color: '#0f3d5e' },
       { badge: 'D25', title: 'Lake Tekapo (Dag 25)', lat: -44.0047, lng: 170.4771, color: '#334155' },
       { badge: 'D26', title: 'Geraldine / Peel Forest (Dag 26)', lat: -43.8936, lng: 171.2414, color: '#334155' }
