@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Eén document per reisgroep. Alleen wie de (lange, willekeurige) groepscode kent,
+    // kan het lezen of bijwerken. Lijsten opvragen en verwijderen kan niet.
+    match /trips/{groep} {
+      allow get: if request.auth != null
+                 && groep.matches('NZ-[A-Z0-9]{6}-[A-Z0-9]{6}-[A-Z0-9]{6}-[A-Z0-9]{6}');
+      allow create, update: if request.auth != null
+                 && groep.matches('NZ-[A-Z0-9]{6}-[A-Z0-9]{6}-[A-Z0-9]{6}-[A-Z0-9]{6}')
+                 && request.resource.data.keys().hasAll(['days', 'bookings', 'packing', 'expenses'])
+                 && request.resource.data.days is list
+                 && request.resource.data.days.size() <= 40;
+    }
+  }
+}
